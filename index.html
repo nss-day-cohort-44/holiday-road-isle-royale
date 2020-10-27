@@ -5,5 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <header><img>Logo</header>
+  <body id="container">
+    <section class="left">
+
+        <div class="select">
+          <select id="parksFilter" class="filter"></select>
+          <select id="bizarreFilter" class="filter"></select>
+          <select id="eatsFilter" class="filter"></select>
+          <button id="saveButton" class="button">Save</button>
+        </div>
+
+        <div class="previewArea">
+          <header class="header__preview"><h2>Itinerary Preview</h2></header>
+          <div class="cardArea">
+            <div id="parkCard" class="previewCard">
+              <h3 card="card__category">Park Card</h3>
+              <img class="parkCard__image">
+              <h4 class="parkCard__title"></h4>
+              <button id="parkCard__button">Details</button>
+            </div>
+            <div id="bizzarreCard" class="previewCard">
+              <h3 card="card__category">Bizzarre Card</h3>
+              <img class="bizzarreCard__image">
+              <h4 class="bizzarreCard__title"></h4>
+              <button id="bizzarreCard__button">Details</button>
+            </div>
+            <div id="eateryCard" class="previewCard">
+              <h3 card="card__category">Eatery Card</h3>
+              <img class="eateryCard__image">
+              <h4 class="eateryCard__title"></h4>
+              <button id="eateryCard__button">Details</button>
+            </div>
+          </div>
+
+          <div class="weather">
+            
+          </div>
+
+        </div>
+    </section>
+    <section class="right">
+      <header class="header__saved">Saved Itineraries</header>
+      <div class="savedArea">
+        <div class="savedCards">
+          <img>
+          <div class="savedDetails"></div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
