@@ -1,4 +1,4 @@
-import "./Settings.js"
+
 import { useParks, getParks } from "./parks/ParkProvider.js"
-console.log();
-// getParks();
+console.log("main module test");
+getParks();
