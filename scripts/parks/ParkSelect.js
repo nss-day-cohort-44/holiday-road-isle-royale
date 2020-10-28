@@ -23,3 +23,15 @@ const parksSelectHTML = parks => {
     }
     `
 }
+
+eventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.id === "parksFilter") {
+        const customEvent = new CustomEvent("parksSelect", {
+            detail: {
+                parksThatWasChosen: changeEvent.target.value
+            }
+        })
+        eventHub.dispatchEvent(customEvent)
+        console.log(customEvent)
+    }
+})

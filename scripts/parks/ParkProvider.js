@@ -17,7 +17,7 @@ export const getParks = () => {
         parsedParks => {
             
             ParksArray = parsedParks.data
-            console.log("INSIDE GET PARKS", ParksArray)
+            // console.log("INSIDE GET PARKS", ParksArray)
         }
     )
 }
