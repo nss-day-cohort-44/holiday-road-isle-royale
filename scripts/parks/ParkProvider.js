@@ -1,21 +1,23 @@
 import { default as myKeys } from "../Settings.js"
 
-console.log(myKeys.npsKey)
+// console.log(myKeys.npsKey)
 
 let ParksArray = []
 
-export const useParks= () => { 
+export const useParks= () => {
+    // debugger 
     return ParksArray.slice()
 }
 
 export const getParks = () => {
+    // debugger
     return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${myKeys.npsKey}`)
     .then(response => response.json())
     .then(
         parsedParks => {
-            // console.table(parsedCriminals)
-            ParksArray = parsedParks
-            console.log(ParksArray)
+            
+            ParksArray = parsedParks.data
+            // console.log("INSIDE GET PARKS", ParksArray)
         }
     )
 }
