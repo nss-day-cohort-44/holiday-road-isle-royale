@@ -1,0 +1,25 @@
+
+import { getParks, useParks } from "./ParkProvider.js"
+
+const eventHub = document.querySelector("#container")
+const parkSelectElement = document.querySelector("#parksFilter")
+
+export const parkSelect = () => {
+    return getParks()
+        .then(() => {
+            const parks = useParks()
+            parksSelectHTML(parks)
+        })
+}
+
+
+const parksSelectHTML = parks => {
+    parkSelectElement.innerHTML = `
+    <option value="0">Please Select a Park... </option>
+    ${
+        parks.map( park => {
+            return `<option value="${park.id}">${park.name}</option>`
+        }).join(" ")
+    }
+    `
+}
