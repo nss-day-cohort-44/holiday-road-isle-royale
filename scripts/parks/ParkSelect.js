@@ -17,6 +17,7 @@ const parksSelectHTML = parks => {
     parkSelectElement.innerHTML = `
     <option value="0">Please Select a Park... </option>
     ${parks.map(park => {
+        console.log(park.name)
         return `<option value="${park.id}">${park.name}</option>`
     }).join(" ")
         }
