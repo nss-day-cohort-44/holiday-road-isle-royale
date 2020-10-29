@@ -14,9 +14,12 @@ export const parkSelect = () => {
 
 
 const parksSelectHTML = parks => {
+    // debugger
+    console.log(parks)
     parkSelectElement.innerHTML = `
     <option value="0">Please Select a Park... </option>
     ${parks.map(park => {
+        console.log(park.name)
         return `<option value="${park.id}">${park.name}</option>`
     }).join(" ")
         }
@@ -24,6 +27,7 @@ const parksSelectHTML = parks => {
 }
 
 eventHub.addEventListener("change", changeEvent => {
+
     if (changeEvent.target.id === "parksFilter") {
         const customEvent = new CustomEvent("parkSelect", {
             detail: {
@@ -32,5 +36,7 @@ eventHub.addEventListener("change", changeEvent => {
         })
         eventHub.dispatchEvent(customEvent)
         console.log(customEvent)
+        // console.log(changeEvent)
+        
     }
 })

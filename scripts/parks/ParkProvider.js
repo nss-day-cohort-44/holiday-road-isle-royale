@@ -11,16 +11,25 @@ export const useParks= () => {
 
 export const getParks = () => {
     // debugger
-    return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${myKeys.npsKey}`)
+    return fetch(`https://developer.nps.gov/api/v1/parks?q=scenic&limit=193&api_key=${myKeys.npsKey}`)
     .then(response => response.json())
     .then(
         parsedParks => {
             
-            ParksArray = parsedParks.data
-            // console.log("INSIDE GET PARKS", ParksArray)
-        }
+            ParksArray = parsedParks
+
+            ParksArray = parsedParks.data.map(function (park) {return{"id": park.id, "name": park.name, "fullName": park.fullName, "image": park.images[0], "city": park.addresses[0].city, "state": park.addresses[0].stateCode, "latitude": park.latitude, "longitude": park.longitude, "description": park.description}})
+
+            console.log(ParksArray[0].id)      
+
+            }
     )
 }
+
+// const parksInfo = ParksArray.map(function (park) {return{"ID": park.id,"Name": park.fullName}})
+ 
+// console.log("PARKINFO MAP", parksInfo)
+
     
     // const url = "https://api.football-data.org/v2/matches";
     // fetch(url, {
