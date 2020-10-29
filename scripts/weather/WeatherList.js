@@ -35,7 +35,7 @@ const forecastHTML = (api) => {
         <h3 class="weatherCard__date">${new Date(api.dt).toLocaleDateString('en-US')}</h3>
         <img class="weatherCard__icon" src="http://openweathermap.org/img/wn/${api.weather.icon}@2x.png">
         <h4 class="weatherCard__atmosphere">${api.weather.main}: ${api.weather.description}</h4>
-        <h4 class="weatherCard__windSpeed">${api.wind_speed*0.62}mph</h4>
+        <h4 class="weatherCard__windSpeed">Wind Speed: ${api.wind_speed*0.62}mph</h4>
         <h4 class="weatherCard__high">High: ${api.temp.min-459.67}&#8457;</h4>
         <h4 class="weatherCard__low">Low: ${api.temp.max-459.67}&#8457;</h4>
         <h4 class="weatherCard__humidity">Humidity: ${api.humidity}&#37;</h4>
