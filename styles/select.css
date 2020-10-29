@@ -1,8 +1,10 @@
 .select {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .filter {
     margin: .25rem;
+    width: 20%;
 }
