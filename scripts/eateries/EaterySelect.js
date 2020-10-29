@@ -29,6 +29,5 @@ eventHub.addEventListener("change", changeEvent => {
             }
         })
         eventHub.dispatchEvent(customEvent)
-        console.log(customEvent)
     }
 })
