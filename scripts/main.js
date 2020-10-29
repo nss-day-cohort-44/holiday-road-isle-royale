@@ -8,6 +8,7 @@ import "./attractions/AttractionList.js"
 import "./eateries/EateryList.js"
 import { getEateries } from "./eateries/EateryProvider.js";
 import { eaterySelect } from "./eateries/EaterySelect.js"
+import "./weather/WeatherList.js"
 
 console.log("main module test");
 getParks();
