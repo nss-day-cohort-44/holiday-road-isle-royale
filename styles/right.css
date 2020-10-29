@@ -1,4 +1,8 @@
 .right {
     text-align: center;
-    border: 2px solid red;
+
+}
+
+.itineraryCard {
+    margin-bottom: 1rem;
 }

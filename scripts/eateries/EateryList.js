@@ -50,8 +50,7 @@ eventHub.addEventListener("eateryMinimizeButtonClicked", changeEvent => {
 })
 
 const render = (eateryObj) => {
-    contentElement.innerHTML = `
-    <h3 class="card__category">Eatery</h3>
-    ${eateryObj}
-    `
+    contentElement.innerHTML = 
+eateryObj
+    
 }
