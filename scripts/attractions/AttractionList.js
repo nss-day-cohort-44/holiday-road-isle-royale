@@ -1,4 +1,5 @@
 import { getAttractions, useAttractions  } from './AttractionProvider.js'
+import { bizarreCardHTML } from "./Attraction.js"
 
 const attractionsElement = document.querySelector("#bizzarreCard")
 const eventHub = document.querySelector("#container")
@@ -24,13 +25,3 @@ const render = (bizarreObj) => {
     attractionsElement.innerHTML = bizarreObj
 }
 
-const bizarreCardHTML = (api) => {
-    return `
-    <div id="bizzarreCard--${api.id}" class="previewCard">
-        <h3 class="card__category">Bizarre Attraction</h3>
-        <h4 class="bizzarreCard__location">${api.state}, ${api.city}</h4>
-        <h4 class="bizzarreCard__title">${api.name}</h4>
-        <button id="bizzarreCard__button">Details</button>
-    </div>
-    `
-}
