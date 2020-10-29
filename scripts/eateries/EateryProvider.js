@@ -11,6 +11,7 @@ export const getEateries = () => {
         parsedEateries => {
             eateriesArray = parsedEateries
             // console.log(eateriesArray)
+
         }
     )
 }
