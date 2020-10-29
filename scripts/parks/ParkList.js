@@ -24,6 +24,11 @@ eventHub.addEventListener("parkSelect", changeEvent => {
 
 
 const render = (parkObj) => {
-    parksElement.innerHTML = parkObj
+    
+    parksElement.innerHTML = 
+    `
+    <h3>Park</h3>
+    ${parkObj}
+    `
 }
 

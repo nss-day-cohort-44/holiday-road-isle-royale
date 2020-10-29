@@ -15,7 +15,6 @@ export const parkSelect = () => {
 
 const parksSelectHTML = parks => {
     // debugger
-    console.log(parks)
     parkSelectElement.innerHTML = `
     <option value="0">Please Select a Park... </option>
     ${parks.map(park => {

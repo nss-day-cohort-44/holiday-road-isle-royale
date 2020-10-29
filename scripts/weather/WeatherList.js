@@ -26,7 +26,7 @@ eventHub.addEventListener("parkSelect", changeEvent => {
                 for (let i=0; i<=4; i++) {
                     fiveDayForecast += forecastHTML(forecast[i])
                 }
-
+                
                 render(fiveDayForecast)
             })
     }

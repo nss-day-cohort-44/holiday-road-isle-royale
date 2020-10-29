@@ -1,6 +1,5 @@
 .weather {
     min-height: 300px;
-    background-color: blue;
     display: flex;
     flex-direction: row;
 }

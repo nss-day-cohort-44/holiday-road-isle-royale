@@ -10,7 +10,6 @@ export const getEateries = () => {
     .then(
         parsedEateries => {
             eateriesArray = parsedEateries
-            console.log(eateriesArray)
         }
     )
 }
