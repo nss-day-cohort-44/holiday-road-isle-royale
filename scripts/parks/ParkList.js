@@ -34,5 +34,5 @@ const parkCardHTML = (api) => {
         <h4 class="parkCard__title">${api.fullName}</h4>
         <button id="parkCard__button">Details</button>
     </div>
-              `
+    `
 }

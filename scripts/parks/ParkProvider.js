@@ -11,16 +11,18 @@ export const useParks= () => {
 
 export const getParks = () => {
     // debugger
-    return fetch(`https://developer.nps.gov/api/v1/parks?limit=10&api_key=${myKeys.npsKey}`)
+    return fetch(`https://developer.nps.gov/api/v1/parks?q=scenic&limit=193&api_key=${myKeys.npsKey}`)
     .then(response => response.json())
     .then(
         parsedParks => {
             
-            ParksArray = parsedParks.data
-            // console.log("INSIDE GET PARKS", ParksArray)
-            const parksInfo = ParksArray.map(function (park) {return{"id": park.id, "Name": park.fullName, "Image": park.images[0], "City": park.addresses[0].city, "State": park.addresses[0].stateCode}})
-            console.log("PARKINFO MAP", parksInfo)
-        }
+            ParksArray = parsedParks
+
+            ParksArray = parsedParks.data.map(function (park) {return{"id": park.id, "Name": park.name, "fullName": park.fullName, "Image": park.images[0], "City": park.addresses[0].city, "State": park.addresses[0].stateCode, "Latitude": park.latitude, "Longitude": park.longitude, "Description": park.description}})
+
+            console.log(ParksArray)      
+
+            }
     )
 }
 
