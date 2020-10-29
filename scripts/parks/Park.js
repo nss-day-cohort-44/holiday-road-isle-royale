@@ -24,7 +24,7 @@ export const parkCardDescriptionHTML = (api) => {
     return `
     <div id="${api.id}" >
         <h3 class="card__category">Park</h3>
-        <img class="parkCard__image" src="${api.images[0].url}">
+        <img class="parkCard__image" src="${api.image.url}">
         <h4 class="parkCard__title title">${api.fullName}</h4>
         <br>
          <div class="parkCard__description description">${api.description}</div>
