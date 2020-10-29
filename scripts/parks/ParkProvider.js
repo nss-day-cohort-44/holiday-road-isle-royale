@@ -11,16 +11,23 @@ export const useParks= () => {
 
 export const getParks = () => {
     // debugger
-    return fetch(`https://developer.nps.gov/api/v1/parks?api_key=${myKeys.npsKey}`)
+    return fetch(`https://developer.nps.gov/api/v1/parks?limit=10&api_key=${myKeys.npsKey}`)
     .then(response => response.json())
     .then(
         parsedParks => {
             
             ParksArray = parsedParks.data
             // console.log("INSIDE GET PARKS", ParksArray)
+            const parksInfo = ParksArray.map(function (park) {return{"id": park.id, "Name": park.fullName, "Image": park.images[0], "City": park.addresses[0].city, "State": park.addresses[0].stateCode}})
+            console.log("PARKINFO MAP", parksInfo)
         }
     )
 }
+
+// const parksInfo = ParksArray.map(function (park) {return{"ID": park.id,"Name": park.fullName}})
+ 
+// console.log("PARKINFO MAP", parksInfo)
+
     
     // const url = "https://api.football-data.org/v2/matches";
     // fetch(url, {
