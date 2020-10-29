@@ -1,7 +1,7 @@
 
 import { default as mykeys } from "../Settings.js"
 
-const weatherArray = []
+let weatherArray = []
 
 export const useWeather = () => {
     return weatherArray.slice()
