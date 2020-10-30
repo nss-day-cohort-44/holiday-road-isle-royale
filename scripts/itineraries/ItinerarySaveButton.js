@@ -4,7 +4,7 @@ import "./SaveButtonDisable.js"
 const eventHub = document.querySelector("#container")
 
 
-
+// needs major refactor post-friday afternoon feedback...
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveButton") {
         const parkImage = document.querySelector(".parkCard__image").src

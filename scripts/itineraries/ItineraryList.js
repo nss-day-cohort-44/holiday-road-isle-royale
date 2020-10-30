@@ -1,22 +1,22 @@
 const itinerariesContainer = document.querySelector(".savedArea")
 const eventHub = document.querySelector("#container")
 
-import { getItineraries, useItineraries  } from './ItineraryProvider.js'
+import { getItineraries, useItineraries } from './ItineraryProvider.js'
 import { itineraryCardHTML } from "./Itinerary.js"
 
 
 export const ItineraryList = () => {
     getItineraries()
-    .then(() => {
-        const allItineraries = useItineraries()
-        renderSaved(allItineraries)
-        console.log(allItineraries)
-    })
+        .then(() => {
+            const allItineraries = useItineraries()
+            renderSaved(allItineraries)
+            // console.log(allItineraries)
+        })
 }
 
 eventHub.addEventListener("itineraryStateChanged", () => ItineraryList())
 
-export const renderSaved = (itineraries) => {
+const renderSaved = (itineraries) => {
     let itinerariesHTMLRepresentations = ""
     for (const itinerary of itineraries) {
         itinerariesHTMLRepresentations += itineraryCardHTML(itinerary)

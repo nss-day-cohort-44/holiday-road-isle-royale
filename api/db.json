@@ -9,6 +9,26 @@
       "eateryName": "McClard's BBQ",
       "eateryLocation": "AR, Hot Springs",
       "id": 1
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7F0F97-1DD8-B71B-0B2AE2BF68A9390E.jpg",
+      "parkName": "Amistad National Recreation Area",
+      "parkLocation": "Test City, State",
+      "attractionName": "Largest Fork in the US",
+      "attractionLocation": "CO, Creede",
+      "eateryName": "The Old Clam House",
+      "eateryLocation": "CA, San Francisco",
+      "id": 2
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7BC1AE-1DD8-B71B-0BF60FDE7A21822B.jpg",
+      "parkName": "Aleutian Islands World War II National Historic Area",
+      "parkLocation": "Test City, State",
+      "attractionName": "Cabazon Dinosaurs",
+      "attractionLocation": "CA, Cabazon",
+      "eateryName": "Deer Park Tavern",
+      "eateryLocation": "DE, Newark",
+      "id": 3
     }
   ]
 }
