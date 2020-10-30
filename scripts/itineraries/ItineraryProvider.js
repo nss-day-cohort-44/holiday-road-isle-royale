@@ -1,4 +1,4 @@
-
+const eventHub = document.querySelector("#container")
 // set empty array for our itineraties we will be using form our JSON server
 let itineraries = []
 
@@ -17,3 +17,22 @@ export const getItineraries = () => {
             // console.log(itineraries)
         })
 }
+
+export const saveItineraries = itinerary => {
+    return fetch('http://localhost:8088/itineraries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(itinerary)
+    })
+    .then(getItineraries)
+    .then(dispatchStateChangeEvent)
+}
+
+const dispatchStateChangeEvent = () => {
+    const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
+
+    eventHub.dispatchEvent(itineraryStateChangedEvent)
+} 
+

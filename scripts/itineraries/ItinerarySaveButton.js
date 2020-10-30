@@ -1,5 +1,4 @@
-import { getItineraries } from "./ItineraryProvider.js"
-import "./SaveButtonDisable.js"
+import { saveItineraries } from "./ItineraryProvider.js"
 
 const eventHub = document.querySelector("#container")
 
@@ -33,21 +32,21 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
-const saveItineraries = itinerary => {
-    return fetch('http://localhost:8088/itineraries', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(itinerary)
-    })
-    .then(getItineraries)
-    .then(dispatchStateChangeEvent)
-}
+// disable functionality 
 
-const dispatchStateChangeEvent = () => {
-    const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
 
-    eventHub.dispatchEvent(itineraryStateChangedEvent)
-} 
+const saveBtn = document.querySelector("#saveButton")
+saveBtn.disabled = true
 
+eventHub.addEventListener("change",event => {
+    const parkFilter = document.querySelector("#parksFilter")
+    const bizarreFilter = document.querySelector("#bizarreFilter")
+    const eatsFilter = document.querySelector("#eatsFilter")
+
+    if(parkFilter.value === "0" || bizarreFilter.value === "0" || eatsFilter.value === "0") {
+        saveBtn.disabled = true
+    } else {
+        saveBtn.disabled = false
+
+    }
+})
