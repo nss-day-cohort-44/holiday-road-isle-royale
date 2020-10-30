@@ -39,6 +39,16 @@
       "eateryName": "Haven Brothers Diner",
       "eateryLocation": "RI, Providence",
       "id": 4
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C86C7EB-1DD8-B71B-0BF2A10341617580.jpg",
+      "parkName": "Ala Kahakai National Historic Trail",
+      "parkLocation": "Test City, State",
+      "attractionName": "Cabazon Dinosaurs",
+      "attractionLocation": "CA, Cabazon",
+      "eateryName": "Deer Park Tavern",
+      "eateryLocation": "DE, Newark",
+      "id": 5
     }
   ]
 }
