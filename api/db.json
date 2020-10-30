@@ -29,6 +29,16 @@
       "eateryName": "Deer Park Tavern",
       "eateryLocation": "DE, Newark",
       "id": 3
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7A058F-1DD8-B71B-0B188ED102F7285F.jpg",
+      "parkName": "Agate Fossil Beds National Monument",
+      "parkLocation": "Test City, State",
+      "attractionName": "Snake World",
+      "attractionLocation": "AR, Berryville",
+      "eateryName": "Big Bob Gibson Bar-B-Que",
+      "eateryLocation": "AL, Decatur",
+      "id": 4
     }
   ]
 }
