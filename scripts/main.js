@@ -10,9 +10,10 @@ import { getEateries } from "./eateries/EateryProvider.js";
 import { eaterySelect } from "./eateries/EaterySelect.js"
 import { ItineraryList } from "./itineraries/ItineraryList.js"
 import "./weather/WeatherList.js"
+import "./itineraries/SaveButtonDisable.js"
+import "./itineraries/ItinerarySaveButton.js"
 
 console.log("main module test");
-getParks();
 parkSelect();
 getAttractions();
 attractionSelect();

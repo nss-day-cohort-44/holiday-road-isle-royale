@@ -9,14 +9,14 @@ export const ItineraryList = () => {
     getItineraries()
     .then(() => {
         const allItineraries = useItineraries()
-        render(allItineraries)
+        renderSaved(allItineraries)
         console.log(allItineraries)
     })
 }
 
 eventHub.addEventListener("itineraryStateChanged", () => ItineraryList())
 
-const render = (itineraries) => {
+export const renderSaved = (itineraries) => {
     let itinerariesHTMLRepresentations = ""
     for (const itinerary of itineraries) {
         itinerariesHTMLRepresentations += itineraryCardHTML(itinerary)
