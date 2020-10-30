@@ -31,6 +31,7 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7A058F-1DD8-B71B-0B188ED102F7285F.jpg",
       "parkName": "Agate Fossil Beds National Monument",
       "parkLocation": "Test City, State",
@@ -38,6 +39,15 @@
       "attractionLocation": "AR, Berryville",
       "eateryName": "Big Bob Gibson Bar-B-Que",
       "eateryLocation": "AL, Decatur",
+=======
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C82EBFE-1DD8-B71B-0B21072718DB2A95.jpg",
+      "parkName": "Badlands National Park",
+      "parkLocation": "Test City, State",
+      "attractionName": "Grave of Marie Laveau, the Voodoo Queen",
+      "attractionLocation": "LA, New Orleans",
+      "eateryName": "Haven Brothers Diner",
+      "eateryLocation": "RI, Providence",
+>>>>>>> master
       "id": 4
     }
   ]
