@@ -1,7 +1,8 @@
 import { ItineraryList } from "./ItineraryList.js"
 
 
-
+const saveBtn = document.querySelector("#saveButton")
+saveBtn.disabled = true
 
 
 let itineraries = []
@@ -19,6 +20,3 @@ export const getItineraries = () => {
             // console.log(itineraries)
         })
 }
-
-
-

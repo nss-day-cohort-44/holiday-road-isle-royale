@@ -1,94 +1,44 @@
 {
   "itineraries": [
     {
-      "id": 1,
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C861078-1DD8-B71B-0B774A242EF6A706.jpg",
-      "parkName": "Acadia",
-      "parkLocation": "Nowhere, AL",
-      "attractionName": "Snake World",
-      "attractionLocation": "Snaketown, ID",
-      "eateryName": "Steak House",
-      "eateryLocation": "Amarillo, TX"
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C85DA69-1DD8-B71B-0B56D1B9F92263B5.jpg",
+      "parkName": "Appomattox Court House National Historical Park",
+      "parkLocation": "Test City, State",
+      "attractionName": "White House Replica",
+      "attractionLocation": "GA, Atlanta",
+      "eateryName": "St. Elmo Steak House",
+      "eateryLocation": "IN, Indianapolis",
+      "id": 1
     },
     {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7C7416-1DD8-B71B-0B1B30D0827F7C74.jpg",
-      "parkName": "Adams National Historical Park",
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C83D5EF-1DD8-B71B-0B12587F850C6E33.jpg",
+      "parkName": "Apostle Islands National Lakeshore",
       "parkLocation": "Test City, State",
-      "attractionName": "Owney the Stuffed Dog Postal Mascot",
-      "attractionLocation": "DC, Washington",
-      "eateryName": "Jack Fry's",
-      "eateryLocation": "KY, Louisville",
+      "attractionName": "Fountain of Youth",
+      "attractionLocation": "DE, Lewes",
+      "eateryName": "Hudson's Hamburgers",
+      "eateryLocation": "ID, Coeur d'Alene",
       "id": 2
     },
     {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C861078-1DD8-B71B-0B774A242EF6A706.jpg",
-      "parkName": "Abraham Lincoln Birthplace National Historical Park",
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C87F1CB-1DD8-B71B-0B8B6223F6173DF9.jpg",
+      "parkName": "Andersonville National Historic Site",
       "parkLocation": "Test City, State",
-      "attractionName": "Elvis Memorial Chapel",
-      "attractionLocation": "AZ, Apache Junction",
-      "eateryName": "Deer Park Tavern",
-      "eateryLocation": "DE, Newark",
+      "attractionName": "Snake World",
+      "attractionLocation": "AR, Berryville",
+      "eateryName": "Buckhorn Exchange",
+      "eateryLocation": "CO, Denver",
       "id": 3
     },
     {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/8B115C1E-B4B2-AF30-1C562C5D39E4B637.jpg",
-      "parkName": "Big Bend National Park",
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C82A965-1DD8-B71B-0B42F2CD698E11A7.jpg",
+      "parkName": "Anacostia Park",
       "parkLocation": "Test City, State",
-      "attractionName": "Snake World",
-      "attractionLocation": "AR, Berryville",
-      "eateryName": "Louis' Lunch",
-      "eateryLocation": "CT, New Haven",
+      "attractionName": "Cabazon Dinosaurs",
+      "attractionLocation": "CA, Cabazon",
+      "eateryName": "Occidental Grill & Seafood",
+      "eateryLocation": "DC, Washington",
       "id": 4
-    },
-    {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/8B115C1E-B4B2-AF30-1C562C5D39E4B637.jpg",
-      "parkName": "Big Bend National Park",
-      "parkLocation": "Test City, State",
-      "attractionName": "Snake World",
-      "attractionLocation": "AR, Berryville",
-      "eateryName": "H&H Soul Food",
-      "eateryLocation": "GA, Macon",
-      "id": 5
-    },
-    {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C847F86-1DD8-B71B-0B476A9BC4ABFDBB.jpg",
-      "parkName": "Arkansas Post National Memorial",
-      "parkLocation": "Test City, State",
-      "attractionName": "World’s Largest Egg",
-      "attractionLocation": "IN, Mentone",
-      "eateryName": "Northwestern Steakhouse",
-      "eateryLocation": "IA, Mason City",
-      "id": 6
-    },
-    {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7F83E6-1DD8-B71B-0BD4AB5763204C1E.jpg",
-      "parkName": "Baltimore-Washington Parkway",
-      "parkLocation": "Test City, State",
-      "attractionName": "World’s Largest Egg",
-      "attractionLocation": "IN, Mentone",
-      "eateryName": "Ocean Pride",
-      "eateryLocation": "MD, Lutherville",
-      "id": 7
-    },
-    {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C8397D6-1DD8-B71B-0BEF4C54462A1EB3.jpg",
-      "parkName": "Appalachian National Scenic Trail",
-      "parkLocation": "Test City, State",
-      "attractionName": "First Kiss Spot of the Obamas",
-      "attractionLocation": "IL, Chicago",
-      "eateryName": "Gene & Jude's",
-      "eateryLocation": "IL, River Grove",
-      "id": 8
-    },
-    {
-      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C79850F-1DD8-B71B-0BC4A88BA85DE6B0.jpg",
-      "parkName": "Arches National Park",
-      "parkLocation": "Test City, State",
-      "attractionName": "Giant Abraham Lincoln",
-      "attractionLocation": "ID, Boise",
-      "eateryName": "Commander's Palace",
-      "eateryLocation": "LA, New Orleans",
-      "id": 9
     }
   ]
 }

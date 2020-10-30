@@ -12,7 +12,6 @@ eventHub.addEventListener("attractionSelected", changeEvent => {
             const chosenAttraction = attractions.find ( taco => {
                 return taco.id === parseInt(changeEvent.detail.attractionThatWasChosen)
             })
-            // console.log(chosenAttraction)
             const bizarreHTML = bizarreCardPreviewHTML(chosenAttraction)
             render(bizarreHTML)
     }
