@@ -38,7 +38,7 @@ export const eateryCardHTML = (api) => {
          <h4 class="eateryCard__title title">${api.businessName}</h4>
          <div class="eateryCard__location location">${api.state}, ${api.city}</div>
          <br>
-         <div class="eateryCard__preview preview">${api.description}</div>
+         <div class="eateryCard__description description">${api.description}</div>
          <br>
          <button id="eateryCard__minimize" value="${api.id}">Minimize</button>
      </div>
