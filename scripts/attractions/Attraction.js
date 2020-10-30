@@ -2,10 +2,11 @@ import { preview } from "../Preview.js"
 
 const eventHub = document.querySelector("#container")
 
+// Creates html for attraction preview
 export const bizarreCardPreviewHTML = (api) => {
-    const shortenedDescription = preview(api.description)
+  const shortenedDescription = preview(api.description)
 
-    return `
+  return `
     <div id="bizzarreCard--${api.id}">
         <h3 class="card__category">Bizarre Attraction</h3>
         <br>
@@ -19,19 +20,21 @@ export const bizarreCardPreviewHTML = (api) => {
     `
 }
 
-eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "bizzarreCard__button") {
-        const customEvent = new CustomEvent("attractionsDetailButtonClicked", {
-            detail: {
-                attractionThatWasChosen: clickEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
+// Listens for detail btn click and attaches attraction id to event object
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "bizzarreCard__button") {
+    const customEvent = new CustomEvent("attractionsDetailButtonClicked", {
+      detail: {
+        attractionThatWasChosen: clickEvent.target.value,
+      },
+    })
+    eventHub.dispatchEvent(customEvent)
+  }
 })
 
+// Creates attraction full detail card and addds minimize btn
 export const bizarreCardHTML = (api) => {
-    return `
+  return `
     <div id="bizzarreCard--${api.id}">
         <h3 class="card__category">Bizarre Attraction</h3>
         <br>
@@ -45,13 +48,15 @@ export const bizarreCardHTML = (api) => {
     `
 }
 
-eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "bizzarreCard__minimize") {
-        const customEvent = new CustomEvent("attractionMinimizeButtonClicked", {
-            detail: {
-                attractionThatWasChosen: clickEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
+// Listens for minimize btn click and attaches attraction id to event object.
+
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "bizzarreCard__minimize") {
+    const customEvent = new CustomEvent("attractionMinimizeButtonClicked", {
+      detail: {
+        attractionThatWasChosen: clickEvent.target.value,
+      },
+    })
+    eventHub.dispatchEvent(customEvent)
+  }
 })

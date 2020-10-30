@@ -1,19 +1,15 @@
+// Duh...
+
 let eateriesArray = []
 
 export const useEateries = () => {
-    return eateriesArray.slice()
+  return eateriesArray.slice()
 }
 
 export const getEateries = () => {
-    return fetch("http://holidayroad.nss.team/eateries")
-    .then(response => response.json())
-    .then(
-        parsedEateries => {
-            eateriesArray = parsedEateries
-            
-            // eateries.filter(eatery => {eatery.amenities.wheelchairAccessible === true})
-            // console.log(parsedEateries)
-
-        }
-    )
+  return fetch("http://holidayroad.nss.team/eateries")
+    .then((response) => response.json())
+    .then((parsedEateries) => {
+      eateriesArray = parsedEateries
+    })
 }
