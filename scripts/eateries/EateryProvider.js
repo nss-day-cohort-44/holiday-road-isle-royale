@@ -10,7 +10,9 @@ export const getEateries = () => {
     .then(
         parsedEateries => {
             eateriesArray = parsedEateries
-            // console.log(eateriesArray)
+            
+            // eateries.filter(eatery => {eatery.amenities.wheelchairAccessible === true})
+            // console.log(parsedEateries)
 
         }
     )
