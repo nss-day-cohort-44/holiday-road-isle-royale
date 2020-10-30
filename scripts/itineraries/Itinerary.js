@@ -6,7 +6,6 @@ export const itineraryCardHTML = (obj) => {
         <div class="itineraryCard__image">
         <img src="${obj.parkImage}" alt="image of the park">
         </div>
-        <div class="itineraryCard__location">${obj.parkLocation}</div>
         <h4 class="itineraryCard__attractionName">${obj.attractionName}</h4>
         <div class="itineraryCard__attractionLocation">${obj.attractionLocation}</div>
         <h4 class="itineraryCard__eateryName">${obj.eateryName}</h4>
@@ -15,3 +14,4 @@ export const itineraryCardHTML = (obj) => {
     `
 }
 
+//to be populated with Lat and Long: <div class="itineraryCard__location">${obj.parkLocation}</div>
