@@ -39,6 +39,16 @@
       "eateryName": "Occidental Grill & Seafood",
       "eateryLocation": "DC, Washington",
       "id": 4
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C7A058F-1DD8-B71B-0B188ED102F7285F.jpg",
+      "parkName": "Agate Fossil Beds National Monument",
+      "parkLocation": "Test City, State",
+      "attractionName": "Cabazon Dinosaurs",
+      "attractionLocation": "CA, Cabazon",
+      "eateryName": "The Old Clam House",
+      "eateryLocation": "CA, San Francisco",
+      "id": 5
     }
   ]
 }

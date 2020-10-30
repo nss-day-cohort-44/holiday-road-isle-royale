@@ -14,7 +14,7 @@ eventHub.addEventListener("parkSelect", changeEvent => {
         const foundPark = parks.find( selectedPark => {
             return selectedPark.id === changeEvent.detail.parkThatWasChosen
         })
-        // console.log("park Object", foundPark)
+        console.log("park Object", foundPark)
         getWeather(foundPark)
             .then(() => {
                 let fiveDayForecast = ``
