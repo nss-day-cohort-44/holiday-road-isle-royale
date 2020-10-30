@@ -7,8 +7,6 @@ const eventHub = document.querySelector("#container")
 
 
 eventHub.addEventListener("parkSelect", changeEvent => {
-    console.log("weather reciever pinged")
-    console.log("change Event Id", changeEvent.detail.parkThatWasChosen)
 
     if (changeEvent.target.id !== "0") {
         // debugger
@@ -16,8 +14,6 @@ eventHub.addEventListener("parkSelect", changeEvent => {
         const foundPark = parks.find( selectedPark => {
             return selectedPark.id === changeEvent.detail.parkThatWasChosen
         })
-        console.log(foundPark)
-        // debugger
         getWeather(foundPark)
             .then(() => {
                 let fiveDayForecast = ``
