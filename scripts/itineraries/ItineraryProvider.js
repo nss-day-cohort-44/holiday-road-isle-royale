@@ -2,6 +2,7 @@ import { ItineraryList } from "./ItineraryList.js"
 
 const eventHub = document.querySelector("#container")
 
+
 const dispatchStateChangeEvent = () => {
     const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
 
@@ -63,3 +64,4 @@ eventHub.addEventListener("click", clickEvent => {
         saveItineraries(newItineraryCard)
     }
 })
+
