@@ -29,6 +29,16 @@
       "eateryName": "Deer Park Tavern",
       "eateryLocation": "DE, Newark",
       "id": 3
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/3C82EBFE-1DD8-B71B-0B21072718DB2A95.jpg",
+      "parkName": "Badlands National Park",
+      "parkLocation": "Test City, State",
+      "attractionName": "Grave of Marie Laveau, the Voodoo Queen",
+      "attractionLocation": "LA, New Orleans",
+      "eateryName": "Haven Brothers Diner",
+      "eateryLocation": "RI, Providence",
+      "id": 4
     }
   ]
 }
