@@ -12,7 +12,6 @@ import { ItineraryList } from "./itineraries/ItineraryList.js"
 import "./weather/WeatherList.js"
 
 console.log("main module test");
-getParks();
 parkSelect();
 getAttractions();
 attractionSelect();
