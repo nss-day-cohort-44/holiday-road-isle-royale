@@ -2,10 +2,11 @@ import { preview } from "../Preview.js"
 
 const eventHub = document.querySelector("#container")
 
+// Creates html for eatery preview
 export const eateryCardPreviewHTML = (api) => {
-   const shortenedDescription = preview(api.description)
-    
-    return `
+  const shortenedDescription = preview(api.description)
+
+  return `
     <div id="${api.id}">
         <h3 class="card__category">Eatery</h3>
         <br>
@@ -19,19 +20,22 @@ export const eateryCardPreviewHTML = (api) => {
               `
 }
 
-eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "eateryCard__button") {
-        const customEvent = new CustomEvent("eateryDetailButtonClicked", {
-            detail: {
-                eateryThatWasChosen: clickEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
+// Listens for detail btn click and attaches eatery id to event object
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "eateryCard__button") {
+    const customEvent = new CustomEvent("eateryDetailButtonClicked", {
+      detail: {
+        eateryThatWasChosen: clickEvent.target.value,
+      },
+    })
+    eventHub.dispatchEvent(customEvent)
+  }
 })
 
+// Creates eatery full detail card and addds minimize btn
+
 export const eateryCardHTML = (api) => {
-    return `
+  return `
      <div id="${api.id}" >
          <h3 class="card__category">Eatery</h3>
          <br>
@@ -43,26 +47,17 @@ export const eateryCardHTML = (api) => {
          <button id="eateryCard__minimize" value="${api.id}">Minimize</button>
      </div>
                `
- }
+}
 
-eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "eateryCard__minimize") {
-        const customEvent = new CustomEvent("eateryMinimizeButtonClicked", {
-            detail: {
-                eateryThatWasChosen: clickEvent.target.value
-            }
-        })
-        eventHub.dispatchEvent(customEvent)
-    }
+// Listens for minimize btn click and attaches eatery id to event object.
+
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "eateryCard__minimize") {
+    const customEvent = new CustomEvent("eateryMinimizeButtonClicked", {
+      detail: {
+        eateryThatWasChosen: clickEvent.target.value,
+      },
+    })
+    eventHub.dispatchEvent(customEvent)
+  }
 })
-
-
-
-
-
-/* <div id="${api.id}" class="previewCard">
-<h3 class="card__category">Eatery</h3>
-<div class="eateryCard__location">${api.state}, ${api.city}</div>
-<h4 class="eateryCard__title">${api.businessName}</h4>
-<button id="eateryCard__button">Details</button>
-</div> */
