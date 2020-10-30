@@ -5,7 +5,6 @@ import { default as myKeys } from "../Settings.js"
 let ParksArray = []
 
 export const useParks= () => {
-    // debugger 
     return ParksArray.slice()
 }
 
@@ -18,9 +17,7 @@ export const getParks = () => {
             
             ParksArray = parsedParks
 
-            ParksArray = parsedParks.data.map(function (park) {return{"id": park.id, "name": park.name, "fullName": park.fullName, "image": park.images[0], "city": park.addresses[0].city, "state": park.addresses[0].stateCode, "latitude": park.latitude, "longitude": park.longitude, "description": park.description}})
-
-            console.log(ParksArray)      
+            ParksArray = parsedParks.data.map(function (park) {return{"id": park.id, "name": park.name, "fullName": park.fullName, "image": park.images[0], "city": park.addresses[0].city, "state": park.addresses[0].stateCode, "latitude": park.latitude, "longitude": park.longitude, "description": park.description}})  
 
             }
     )

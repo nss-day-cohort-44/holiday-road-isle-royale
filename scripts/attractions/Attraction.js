@@ -6,7 +6,7 @@ export const bizarreCardPreviewHTML = (api) => {
     const shortenedDescription = preview(api.description)
 
     return `
-    <div id="bizzarreCard--${api.id}" class="previewCard">
+    <div id="bizzarreCard--${api.id}">
         <h3 class="card__category">Bizarre Attraction</h3>
         <br>
         <h4 class="bizzarreCard__title title">${api.name}</h4>
@@ -32,7 +32,7 @@ eventHub.addEventListener("click", clickEvent => {
 
 export const bizarreCardHTML = (api) => {
     return `
-    <div id="bizzarreCard--${api.id}" class="previewCard">
+    <div id="bizzarreCard--${api.id}">
         <h3 class="card__category">Bizarre Attraction</h3>
         <br>
         <h4 class="bizzarreCard__title title">${api.name}</h4>

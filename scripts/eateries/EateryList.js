@@ -50,5 +50,7 @@ eventHub.addEventListener("eateryMinimizeButtonClicked", changeEvent => {
 })
 
 const render = (eateryObj) => {
-    contentElement.innerHTML = eateryObj
+    contentElement.innerHTML = 
+eateryObj
+    
 }

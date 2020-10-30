@@ -7,8 +7,6 @@ const eventHub = document.querySelector("#container")
 
 
 eventHub.addEventListener("parkSelect", changeEvent => {
-    console.log("weather reciever pinged")
-    console.log("change Event Id", changeEvent.detail.parkThatWasChosen)
 
     if (changeEvent.target.id !== "0") {
         // debugger
@@ -16,8 +14,6 @@ eventHub.addEventListener("parkSelect", changeEvent => {
         const foundPark = parks.find( selectedPark => {
             return selectedPark.id === changeEvent.detail.parkThatWasChosen
         })
-        console.log(foundPark)
-        // debugger
         getWeather(foundPark)
             .then(() => {
                 let fiveDayForecast = ``
@@ -26,7 +22,7 @@ eventHub.addEventListener("parkSelect", changeEvent => {
                 for (let i=0; i<=4; i++) {
                     fiveDayForecast += forecastHTML(forecast[i])
                 }
-
+                
                 render(fiveDayForecast)
             })
     }
@@ -41,7 +37,7 @@ const render = (weatherObj) => {
 const forecastHTML = (api) => {
     return `
     <div id="${api.weather[0].id}" class="weatherCard">
-        <h3 class="weatherCard__date">${new Date(api.dt).toLocaleDateString('en-US')}</h3>
+        <h3 class="weatherCard__date">${new Date(api.dt*1000).toLocaleDateString('en-US', {weekday: "long", year: "numeric", month: "long", day: "numeric"})}</h3>
         <img class="weatherCard__icon" src="http://openweathermap.org/img/wn/${api.weather[0].icon}@2x.png">
         <h4 class="weatherCard__atmosphere">${api.weather[0].main}: ${api.weather[0].description}</h4>
         <h4 class="weatherCard__windSpeed">Wind Speed: ${(api.wind_speed/1.609).toFixed(2)}mph</h4>

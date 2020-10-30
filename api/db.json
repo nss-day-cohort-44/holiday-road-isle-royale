@@ -29,6 +29,26 @@
       "eateryName": "Deer Park Tavern",
       "eateryLocation": "DE, Newark",
       "id": 3
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/8B115C1E-B4B2-AF30-1C562C5D39E4B637.jpg",
+      "parkName": "Big Bend National Park",
+      "parkLocation": "Test City, State",
+      "attractionName": "Snake World",
+      "attractionLocation": "AR, Berryville",
+      "eateryName": "Louis' Lunch",
+      "eateryLocation": "CT, New Haven",
+      "id": 4
+    },
+    {
+      "parkImage": "https://www.nps.gov/common/uploads/structured_data/8B115C1E-B4B2-AF30-1C562C5D39E4B637.jpg",
+      "parkName": "Big Bend National Park",
+      "parkLocation": "Test City, State",
+      "attractionName": "Snake World",
+      "attractionLocation": "AR, Berryville",
+      "eateryName": "H&H Soul Food",
+      "eateryLocation": "GA, Macon",
+      "id": 5
     }
   ]
 }

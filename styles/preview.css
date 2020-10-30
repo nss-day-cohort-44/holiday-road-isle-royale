@@ -1,0 +1,19 @@
+.header__preview {
+    text-align: center;
+}
+
+.previewArea {
+  border: 2px solid black;
+  min-height: 350px;
+}
+
+.cardArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.previewCard {
+
+  width:30%
+  
+}
