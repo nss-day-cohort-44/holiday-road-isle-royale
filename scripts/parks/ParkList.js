@@ -7,7 +7,7 @@ const eventHub = document.querySelector("#container")
 
 
 eventHub.addEventListener("parkSelect", changeEvent => {
-    console.log("parks reciever pinged")    
+    // console.log("parks reciever pinged")    
     // debugger
     if (changeEvent.target.id !== 0) {
     getParks()
@@ -23,7 +23,7 @@ eventHub.addEventListener("parkSelect", changeEvent => {
 })
 
 eventHub.addEventListener("parkDetailButtonClicked", changeEvent => {
-    console.log("parks reciever pinged")    
+    // console.log("parks reciever pinged")    
     // debugger
     if (changeEvent.target.id !== 0) {
     getParks()
