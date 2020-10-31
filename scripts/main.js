@@ -9,8 +9,10 @@ import "./attractions/AttractionList.js"
 import "./eateries/EateryList.js"
 import "./weather/WeatherList.js"
 import "./itineraries/ItinerarySaveButton.js"
+import { getParks } from "./parks/ParkProvider.js"
 
 console.log("main module test")
+getParks()
 parkSelect()
 getAttractions()
 attractionSelect()

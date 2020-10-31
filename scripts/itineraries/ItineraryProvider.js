@@ -3,36 +3,34 @@ const eventHub = document.querySelector("#container")
 let itineraries = []
 
 // Duh...
-export const useItineraries= () => {
-    // debugger 
-    return itineraries.slice()
+export const useItineraries = () => {
+  // debugger
+  return itineraries.slice()
 }
 
 // fetches from 'itineraries' the most recent state of the saved itineraries
 export const getItineraries = () => {
-    return fetch('http://localhost:8088/itineraries')
-        .then(response => response.json())
-        .then(parsedItineraries => {
-            itineraries = parsedItineraries
-            // console.log(itineraries)
-        })
+  return fetch("http://localhost:8088/itineraries")
+    .then((response) => response.json())
+    .then((parsedItineraries) => {
+      itineraries = parsedItineraries
+    })
 }
 
-export const saveItineraries = itinerary => {
-    return fetch('http://localhost:8088/itineraries', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(itinerary)
-    })
+export const saveItineraries = (itinerary) => {
+  return fetch("http://localhost:8088/itineraries", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(itinerary),
+  })
     .then(getItineraries)
     .then(dispatchStateChangeEvent)
 }
 
 const dispatchStateChangeEvent = () => {
-    const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
+  const itineraryStateChangedEvent = new CustomEvent("itineraryStateChanged")
 
-    eventHub.dispatchEvent(itineraryStateChangedEvent)
-} 
-
+  eventHub.dispatchEvent(itineraryStateChangedEvent)
+}
