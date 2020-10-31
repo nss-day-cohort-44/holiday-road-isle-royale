@@ -10,10 +10,7 @@ export const getEateries = () => {
   return fetch("http://holidayroad.nss.team/eateries")
     .then((response) => response.json())
     .then((parsedEateries) => {
-      eateriesArray = parsedEateries
-      eateriesArray = eateriesArray.filter(
-        (eatery) => eatery.ameneties.wheelchairAccessible === true
-      )
       console.log(eateriesArray)
+      eateriesArray = parsedEateries
     })
 }

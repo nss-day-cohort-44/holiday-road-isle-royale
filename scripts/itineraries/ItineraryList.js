@@ -24,7 +24,8 @@ export const renderItineraries = () => {
   const eateries = useEateries()
   const attractions = useAttractions()
   const parks = useParks()
-  const allItineraries = useItineraries()
+  // reverse sets display last in as first shown
+  const allItineraries = useItineraries().reverse()
 
   const itineraryArray = allItineraries.map(function (itinObj) {
     return {

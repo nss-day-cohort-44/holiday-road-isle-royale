@@ -12,9 +12,11 @@ export const eaterySelect = () => {
 
 // Renders eatery dropdown
 const render = (eateries) => {
+  // Filter sorts out inaccessible resturants.
   contentElement.innerHTML = `
     <option value="0">Please Select an Eatery... </option>
     ${eateries
+      .filter((eatery) => eatery.ameneties.wheelchairAccessible === true)
       .map((eatery) => {
         return `<option value="${eatery.id}">${eatery.businessName}</option>`
       })
