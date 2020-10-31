@@ -13,7 +13,7 @@ eventHub.addEventListener("parkSelect", changeEvent => {
         // Stores the filteredPark[] into variable parks
         const parks = useParks()
 
-        // .finds the id passed by "parkSelect" event from ParkSelect.js and passes to WeatherProvider.js
+        // .finds the object found in filteredParks[] that matches the id provided by the change event and stores the object in a variable.
         const foundPark = parks.find(selectedPark => {
             return selectedPark.id === changeEvent.detail.parkThatWasChosen
         })

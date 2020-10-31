@@ -7,37 +7,43 @@ import { useEateries } from '../eateries/EateryProvider.js'
 import { useAttractions } from '../attractions/AttractionProvider.js'
 import { useParks } from '../parks/ParkProvider.js'
 
-const eateries = useEateries();
-const attractions = useAttractions();
-const parks = useParks();
-
 
 
 export const ItineraryList = () => {
+    debugger
+    const eateries = useEateries();
+    const attractions = useAttractions();
+    const parks = useParks();
+
+    let itineraryList = []
+
+    let itineraryObject = {}
+    
     getItineraries()
         .then(() => {
             const allItineraries = useItineraries()
-            // renderSaved(allItineraries)
-            let foundPark = ""
-            let foundAttraction = ""
-            let foundEatery = ""
-            for (const itinerary of allItineraries) {
-                foundPark = parks.find((chosen) => {
-                    return chosen.id === (itinerary.park)
+
+            for (let i = 0; i < allItineraries.length; i++) {
+                itineraryObject = {}
+                itineraryObject.foundPark = parks.find((chosen) => {
+                    return chosen.id === (allItineraries[i].park)
                 })
-                foundAttraction = attractions.find((chosen) => {
-                    return chosen.id === parseInt(itinerary.attraction)
+                itineraryObject.foundAttraction = attractions.find((chosen) => {
+                    return chosen.id === parseInt(allItineraries[i].attraction)
                 })
-                foundEatery = eateries.find((chosen) => {
-                    return chosen.id === parseInt(itinerary.eatery)
+                itineraryObject.foundEatery = eateries.find((chosen) => {
+                    return chosen.id === parseInt(allItineraries[i].eatery)
                 })
-                
+                itineraryList.push(itineraryObject)
             }
-                console.log(foundPark)
-                console.log(foundAttraction)
-                console.log(foundEatery) 
-            })
-    }
+            renderSaved(itineraryList)
+            // console.log(foundPark)
+            // console.log(foundAttraction)
+            // console.log(foundEatery)
+        })
+}
+
+
 
 
 eventHub.addEventListener("itineraryStateChanged", () => ItineraryList())
@@ -55,24 +61,3 @@ const renderSaved = (itineraries) => {
         </div>
         `
 }
-
-
-    //     const parkImage = document.querySelector(".parkCard__image").src
-    //     const parkName = document.querySelector(".parkCard__title").textContent
-    //     const parkLocation = "Test City, State"
-    //     const attractionName = document.querySelector(".bizzarreCard__title").textContent
-    //     const attractionLocation = document.querySelector(".bizzarreCard__location").textContent
-    //     const eateryName = document.querySelector(".eateryCard__title").textContent
-    //     const eateryLocation = document.querySelector(".eateryCard__location").textContent
-
-    //     // Make a new object representation of a note
-    //     const newItineraryCard = {
-    //         parkImage,
-    //         parkName,
-    //         parkLocation,
-    //         attractionName,
-    //         attractionLocation,
-    //         eateryName,
-    //         eateryLocation,
-
-    //         // Key/value pairs here

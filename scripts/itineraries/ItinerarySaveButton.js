@@ -10,17 +10,17 @@ let dataObject = {
 
 eventHub.addEventListener("parkSelect", eventObj => {
     dataObject.park = eventObj.detail.parkThatWasChosen
-    // console.log(dataObject)
+    console.log(dataObject)
 })
 
 eventHub.addEventListener("eaterySelect", eventObj => {
     dataObject.eatery = eventObj.detail.eateryThatWasChosen
-    // console.log(dataObject)
+    console.log(dataObject)
 })
 
 eventHub.addEventListener("attractionSelected", eventObj => {
     dataObject.attraction = eventObj.detail.attractionThatWasChosen
-    // console.log(dataObject)
+    console.log(dataObject)
 })
 
 
