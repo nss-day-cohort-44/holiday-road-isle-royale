@@ -11,5 +11,9 @@ export const getEateries = () => {
     .then((response) => response.json())
     .then((parsedEateries) => {
       eateriesArray = parsedEateries
+      eateriesArray = eateriesArray.filter(
+        (eatery) => eatery.ameneties.wheelchairAccessible === true
+      )
+      console.log(eateriesArray)
     })
 }
