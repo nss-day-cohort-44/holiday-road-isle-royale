@@ -1,11 +1,11 @@
 const itinerariesContainer = document.querySelector(".savedArea")
 const eventHub = document.querySelector("#container")
 
-import { getItineraries, useItineraries } from "./ItineraryProvider.js"
+import { useItineraries } from "./ItineraryProvider.js"
 import { itineraryCardHTML } from "./Itinerary.js"
-import { getEateries, useEateries } from "../eateries/EateryProvider.js"
+import { useEateries } from "../eateries/EateryProvider.js"
 import { useAttractions } from "../attractions/AttractionProvider.js"
-import { getParks, useParks } from "../parks/ParkProvider.js"
+import { useParks } from "../parks/ParkProvider.js"
 
 export const ItineraryList = () => {}
 
