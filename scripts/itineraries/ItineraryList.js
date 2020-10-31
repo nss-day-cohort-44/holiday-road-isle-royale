@@ -28,7 +28,6 @@ eventHub.addEventListener("itineraryStateChanged", () => {
       }),
     }
   })
-  console.log("FOUND PARKS", itineraryArray)
   renderSaved(itineraryArray, "foundPark", "foundAttraction", "foundEatery")
 })
 

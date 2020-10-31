@@ -2,10 +2,11 @@ export const itineraryCardHTML = (arrOfObj) => {
   //   Dummy Div ID
 
   return `
-
     <div id="1" class="itineraryCard">
         <h3 class="card__category">Your Itinereary</h3>
         <h4 class="itineraryCard__parkName">${arrOfObj.foundPark.name}</h4>
+        <p>${arrOfObj.foundPark.latitude}</p>
+        <p>${arrOfObj.foundPark.longitude}</p>
         <div class="itineraryCard__image">
         <img src="${arrOfObj.foundPark.image.url}" alt="image of the park">
         </div>
