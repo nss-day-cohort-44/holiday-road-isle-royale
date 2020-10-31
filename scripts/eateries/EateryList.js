@@ -6,6 +6,10 @@ const eventHub = document.querySelector("#container")
 
 //Listens for selected eatery. Matches id from event object to eatery id. Then renders the preview eatery in the dom.
 eventHub.addEventListener("eaterySelect", (changeEvent) => {
+  //   Sets the preview to empty at "0" index on select
+  if (changeEvent.detail.eateryThatWasChosen === "0") {
+    return (contentElement.innerHTML = "")
+  }
   if (changeEvent.target.id !== 0) {
     const eateries = useEateries()
     const chosenEatery = eateries.find((chosen) => {

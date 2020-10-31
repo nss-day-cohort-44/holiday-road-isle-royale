@@ -1,15 +1,26 @@
 const itinerariesContainer = document.querySelector(".savedArea")
 const eventHub = document.querySelector("#container")
 
-import { useItineraries } from "./ItineraryProvider.js"
-import { itineraryCardHTML } from "./Itinerary.js"
-import { useEateries } from "../eateries/EateryProvider.js"
 import { useAttractions } from "../attractions/AttractionProvider.js"
+import { useEateries } from "../eateries/EateryProvider.js"
+import { getItineraries, useItineraries } from "./ItineraryProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
+import { itineraryCardHTML } from "./Itinerary.js"
 
-export const ItineraryList = () => {}
+// eventHub.addEventListener("onload", (e) => {
+//   return getItineraries().then(() => {
+//     renderItineraries()
+//   })
+// })
 
 eventHub.addEventListener("itineraryStateChanged", () => {
+  // Put in fucntion and add onpage load funciton
+  return getItineraries().then(() => {
+    renderItineraries()
+  })
+})
+
+export const renderItineraries = () => {
   const eateries = useEateries()
   const attractions = useAttractions()
   const parks = useParks()
@@ -28,8 +39,9 @@ eventHub.addEventListener("itineraryStateChanged", () => {
       }),
     }
   })
+  console.log(allItineraries)
   renderSaved(itineraryArray, "foundPark", "foundAttraction", "foundEatery")
-})
+}
 
 const renderSaved = (arr) => {
   let itinerariesHTMLRepresentations = ""
@@ -44,46 +56,6 @@ const renderSaved = (arr) => {
         </div>
         `
 }
-
-//     const parkImage = document.querySelector(".parkCard__image").src
-//     const parkName = document.querySelector(".parkCard__title").textContent
-//     const parkLocation = "Test City, State"
-//     const attractionName = document.querySelector(".bizzarreCard__title").textContent
-//     const attractionLocation = document.querySelector(".bizzarreCard__location").textContent
-//     const eateryName = document.querySelector(".eateryCard__title").textContent
-//     const eateryLocation = document.querySelector(".eateryCard__location").textContent
-
-//     // Make a new object representation of a note
-//     const newItineraryCard = {
-//         parkImage,
-//         parkName,
-//         parkLocation,
-//         attractionName,
-//         attractionLocation,
-//         eateryName,
-//         eateryLocation,
-
-//         // Key/value pairs here
-
-// ***************************************
-
-// let foundPark = ""
-// let foundAttraction = ""
-// let foundEatery = ""
-// for (const itinerary of allItineraries) {
-//   foundPark = parks.find((chosen) => {
-//     return chosen.id === itinerary.park
-//   })
-//   foundAttraction = attractions.find((chosen) => {
-//     return chosen.id === parseInt(itinerary.attraction)
-//   })
-//   foundEatery = eateries.find((chosen) => {
-//     return chosen.id === parseInt(itinerary.eatery)
-//   })
-// }
-// console.log(foundPark)
-// console.log(foundAttraction)
-// console.log(foundEatery)
 
 // ***************************************
 

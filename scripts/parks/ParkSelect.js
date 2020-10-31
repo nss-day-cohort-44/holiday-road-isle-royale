@@ -7,7 +7,6 @@ export const parkSelect = () => {
   return getParks().then(() => {
     const parks = useParks()
     parksSelectHTML(parks)
-    console.log("IN PARKSSELECT", parks)
   })
 }
 

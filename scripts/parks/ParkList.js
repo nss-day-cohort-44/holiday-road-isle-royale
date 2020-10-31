@@ -6,14 +6,17 @@ const eventHub = document.querySelector("#container")
 
 //Listens for selected park. Matches id from event object to park id. Then renders the preview park in the dom.
 eventHub.addEventListener("parkSelect", (changeEvent) => {
-  // console.log("parks reciever pinged")
-  // debugger
+  // Makes park preview Blank
+  if (changeEvent.detail.parkThatWasChosen === "0") {
+    return (parksElement.innerHTML = "")
+  }
   if (changeEvent.target.id !== 0) {
     const parks = useParks()
     const chosenPark = parks.find((taco) => {
       return taco.id === changeEvent.detail.parkThatWasChosen
     })
     const parksHTML = parkCardHTML(chosenPark)
+
     render(parksHTML)
   }
 })
