@@ -10,7 +10,8 @@ import "./attractions/AttractionList.js"
 import "./eateries/EateryList.js"
 import "./weather/WeatherList.js"
 import "./itineraries/ItinerarySaveButton.js"
-debugger
+
+
 ItineraryList()
 getParks()
 parkSelect()
