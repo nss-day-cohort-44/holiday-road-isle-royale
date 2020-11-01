@@ -32,15 +32,15 @@ export const ItineraryList = () => {
             for (let i = 0; i < allItineraries.length; i++) {
                 // Empties the transferring object.
                 itineraryObject = {}
-                // Stores the object from the 'parks' array that matches the ID of the corresponding object in the JSON array as a property in 'itineraryObject'.
+                // Stores the object from the 'parks' array, that matches the ID of the corresponding object in the JSON array, as a property into 'itineraryObject'.
                 itineraryObject.foundPark = parks.find((chosen) => {
                     return chosen.id === (allItineraries[i].park)
                 })
-                // Stores the object from the 'attractions' array that matches the ID of the corresponding object in the JSON array as a property in 'itineraryObject'.
+                // Stores the object from the 'attractions' array, that matches the ID of the corresponding object in the JSON array, as a property into 'itineraryObject'.
                 itineraryObject.foundAttraction = attractions.find((chosen) => {
                     return chosen.id === parseInt(allItineraries[i].attraction)
                 })
-                // Stores the object from the 'eateries' array that matches the ID of the corresponding object in the JSON array as a property in 'itineraryObject'.
+                // Stores the object from the 'eateries' array, that matches the ID of the corresponding object in the JSON array, as a property into 'itineraryObject'.
                 itineraryObject.foundEatery = eateries.find((chosen) => {
                     return chosen.id === parseInt(allItineraries[i].eatery)
                 })
