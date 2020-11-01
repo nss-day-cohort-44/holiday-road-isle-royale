@@ -7,7 +7,7 @@ export const itineraryCardHTML = (obj) => {
         <h4 class="itineraryCard__attractionName">${obj.foundAttraction.name}</h4>
         <div class="itineraryCard__attractionLocation">${obj.foundAttraction.city}, ${obj.foundAttraction.state}</div>
         <h4 class="itineraryCard__eateryName">${obj.foundEatery.businessName}</h4>
-        <div class="itineraryCard__eateryLocation">${obj.foundEatery.city}, ${obj.foundEatery.city}</div>
+        <div class="itineraryCard__eateryLocation">${obj.foundEatery.city}, ${obj.foundEatery.state}</div>
     </div>
     `
 }
