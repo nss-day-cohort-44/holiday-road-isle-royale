@@ -18,4 +18,7 @@ attractionSelect()
 
 getEateries()
 eaterySelect()
+
+
+const renderOnLoad = renderItineraries()
 renderItineraries()
