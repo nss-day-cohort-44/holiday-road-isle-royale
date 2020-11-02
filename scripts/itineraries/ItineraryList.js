@@ -18,7 +18,8 @@ export const renderItineraries = () => {
   const eateries = useEateries()
   const attractions = useAttractions()
   const parks = useParks()
-  const allItineraries = useItineraries()
+  // reverse sets display last in as first shown
+  const allItineraries = useItineraries().reverse()
 
   //   Iterates through the array of itineraries and and uses find to pull the appropriate object from each api array.
   const itineraryArray = allItineraries.map(function (itinObj) {
