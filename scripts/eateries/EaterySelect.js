@@ -36,3 +36,7 @@ eventHub.addEventListener("change", (changeEvent) => {
     eventHub.dispatchEvent(customEvent)
   }
 })
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+  eaterySelect();
+})

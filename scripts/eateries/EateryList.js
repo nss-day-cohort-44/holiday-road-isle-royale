@@ -49,3 +49,7 @@ eventHub.addEventListener("eateryMinimizeButtonClicked", (changeEvent) => {
 const render = (eateryObj) => {
   contentElement.innerHTML = eateryObj
 }
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+  contentElement.innerHTML = ""
+})

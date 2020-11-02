@@ -54,3 +54,7 @@ const render = (parkObj) => {
     ${parkObj}
     `
 }
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+  parksElement.innerHTML = ""
+})
