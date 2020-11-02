@@ -18,4 +18,4 @@ attractionSelect()
 
 getEateries()
 eaterySelect()
-// renderItineraries()
+renderItineraries()

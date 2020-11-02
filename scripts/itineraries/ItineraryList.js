@@ -7,12 +7,6 @@ import { getItineraries, useItineraries } from "./ItineraryProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
 import { itineraryCardHTML } from "./Itinerary.js"
 
-// eventHub.addEventListener("onload", (e) => {
-//   return getItineraries().then(() => {
-//     renderItineraries()
-//   })
-// })
-
 eventHub.addEventListener("itineraryStateChanged", () => {
   // Put in fucntion and add onpage load funciton
   return getItineraries().then(() => {
@@ -26,6 +20,7 @@ export const renderItineraries = () => {
   const parks = useParks()
   const allItineraries = useItineraries()
 
+  //   Iterates through the array of itineraries and and uses find to pull the appropriate object from each api array.
   const itineraryArray = allItineraries.map(function (itinObj) {
     return {
       "foundPark": parks.find((chosen) => {
@@ -39,8 +34,8 @@ export const renderItineraries = () => {
       }),
     }
   })
-  console.log(allItineraries)
-  renderSaved(itineraryArray, "foundPark", "foundAttraction", "foundEatery")
+
+  renderSaved(itineraryArray)
 }
 
 const renderSaved = (arr) => {
@@ -56,21 +51,3 @@ const renderSaved = (arr) => {
         </div>
         `
 }
-
-// ***************************************
-
-// getItineraries().then(() => {
-//     const allItineraries = useItineraries()
-//     const itineraryArray = allItineraries.map(function (itinObj) {
-//       return {
-//         "foundPark": parks.find((chosen) => {
-//           return chosen.id === itinerary.park
-//         }),
-//         "foundAttraction": attractions.find((chosen) => {
-//           return chosen.id === parseInt(itinerary.attraction)
-//         }),
-//       }
-//     })
-//     console.log("AFTER ITINLIST", itineraryArray)
-//     console.log("AFTER ITINLIST", parks)
-//   })

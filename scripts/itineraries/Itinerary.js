@@ -1,19 +1,27 @@
-export const itineraryCardHTML = (arrOfObj) => {
-  //   Dummy Div ID
+export const itineraryCardHTML = (obj) => {
+  // Destructed object variables
+  const {
+    foundPark: {
+      name: name,
+      longitude: longitude,
+      latitude: latitude,
+      image: { url: url },
+    },
+    foundAttraction: { name: aName, city: aCity, state: aState },
+    foundEatery: { businessName: businessName, city: eCity, state: eState },
+  } = obj
 
   return `
-    <div id="1" class="itineraryCard">
+    <div id="${obj.id}" class="itineraryCard">
         <h3 class="card__category">Your Itinereary</h3>
-        <h4 class="itineraryCard__parkName">${arrOfObj.foundPark.name}</h4>
-        <p>${arrOfObj.foundPark.latitude}</p>
-        <p>${arrOfObj.foundPark.longitude}</p>
-        <div class="itineraryCard__image">
-        <img src="${arrOfObj.foundPark.image.url}" alt="image of the park">
-        </div>
-        <h4 class="itineraryCard__attractionName">${arrOfObj.foundAttraction.name}</h4>
-        <div class="itineraryCard__attractionLocation">${arrOfObj.foundAttraction.city}, ${arrOfObj.foundAttraction.state}</div>
-        <h4 class="itineraryCard__eateryName">${arrOfObj.foundEatery.businessName}</h4>
-        <div class="itineraryCard__eateryLocation">${arrOfObj.foundEatery.city}, ${arrOfObj.foundEatery.state}</div>
+        <h4 class="itineraryCard__parkName">${name}</h4>
+        <p>Lat: ${latitude}  Long: ${longitude}</p>
+      
+        <img class="itineraryCard__image" src="${url}" alt="image of the park">
+        <h4 class="itineraryCard__attractionName">${aName}</h4>
+        <div class="itineraryCard__attractionLocation">${aCity}, ${aState}</div>
+        <h4 class="itineraryCard__eateryName">${businessName}</h4>
+        <div class="itineraryCard__eateryLocation">${eCity}, ${eState}</div>
     </div>
     `
 }
