@@ -46,3 +46,7 @@ eventHub.addEventListener("attractionMinimizeButtonClicked", (changeEvent) => {
 const render = (bizarreObj) => {
   attractionsElement.innerHTML = bizarreObj
 }
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+  attractionsElement.innerHTML = ""
+})

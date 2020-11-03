@@ -49,3 +49,7 @@ const forecastHTML = (api) => {
     </div>
     `
 }
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+    weatherElement.innerHTML = ""
+  })

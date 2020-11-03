@@ -37,10 +37,6 @@ eventHub.addEventListener("change", (changeEvent) => {
   }
 })
 
-// need to make an event listener to listen for state change in itineraries
-
-eventHub.addEventListener("itineraryStateChanged", (event) => {
+eventHub.addEventListener("itineraryStateChanged", () => {
   parkSelect();
-  console.log(event)
-  }
-)
+})

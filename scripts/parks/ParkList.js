@@ -55,8 +55,14 @@ const render = (parkObj) => {
     `
 }
 
+<<<<<<< HEAD
 // this event listener is to reset the card area when a trip is saved
 eventHub.addEventListener("itineraryStateChanged", (event) => {
   parksElement.innerHTML = "";
   }
 )
+=======
+eventHub.addEventListener("itineraryStateChanged", () => {
+  parksElement.innerHTML = ""
+})
+>>>>>>> master

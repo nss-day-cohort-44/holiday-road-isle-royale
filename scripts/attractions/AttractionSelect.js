@@ -34,3 +34,7 @@ eventHub.addEventListener("change", (changeEvent) => {
     console.log(customEvent)
   }
 })
+
+eventHub.addEventListener("itineraryStateChanged", () => {
+  attractionSelect();
+})
