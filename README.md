@@ -1,10 +1,14 @@
-# Holiday Road from Nashville
+![](./images/nss-isle-royale-logo.png)
 
-You and your teammates have been contracted by the National Parks Service to build an application that will allow people to build itineraries for their trips to the beautiful national parks that they maintain. The starting point of each trip will be Nashville, TN, but the destination will a national park selected by the user.
+# Welcome to Isle Royale
+
+Our group was given the assignment to design an application to help plan a trip to one of the many National Parks of the United States of America. 
 
 ## Getting Started
 
 This is going to be your first full, professional Sprint. A Sprint is part of the [Scrum Framework](https://en.wikipedia.org/wiki/Scrum_%28software_development%29) for agile development. You will be doing daily scrum stand-ups, where you provide a concise status update on your own work. You will be taking part in a sprint review where you demonstrate the work you have completed. You will be taking part in a retrospective, where the team reflects on the work done, the team dynamics, and discuss how to improve in the future.
+
+![](./images/dependencyGraph.png)
 
 ### Code Review
 
@@ -16,13 +20,7 @@ Only when you feel you understand all of the code, you may then complete testing
 
 ### Settings
 
-After each teammate clone the repository, each must perform the following steps.
 
-1. In the `scripts` directory, you will see a file named `.Settings.js` (note the dot at the beginning).
-1. Copy that file with `cp .Settings.js Settings.js`. The `Settings.js` file is already in the `.gitignore` file, so it won't ever be tracked by git.
-1. Register an API key for the APIs below that need it.
-1. Copy your key into the appropriate place in the `Settings.js` file.
-1. The team will need to figure out how to import that object into the data provider modules and use it for the `fetch()` calls that need to be performed.
 
 ## Feature List
 
@@ -176,30 +174,6 @@ https://graphhopper.com/api/1/route?point=starting_latitude,starting_longitude&p
 
 ## Personas
 
-### Anna
-
-![](./personas/persona-anna.png)
-
-### Betsy
-
-![](./personas/persona-betsy.png)
-
-### Brittany
-
-![](./personas/persona-brittany.png)
-
-### Caroline
-
-![](./personas/persona-caroline.png)
 
 ## Charles
 
-![](./personas/persona-charles.png)
-
-### Jake
-
-![](./personas/persona-jake.png)
-
-### Peter
-
-![](./personas/persona-peter.png)
