@@ -39,7 +39,7 @@ export const bizarreCardHTML = (api) => {
         <h3 class="card__category">Bizarre Attraction</h3>
         <br>
         <h4 class="bizzarreCard__title title">${api.name}</h4>
-        <div class="bizzarreCard__location location">${api.state}, ${api.city}</div>
+        <div class="bizzarreCard__location location">${api.city}, ${api.state}</div>
         <br>
         <div class="bizarreCard__preview preview">${api.description}</div>
         <br>
