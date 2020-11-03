@@ -1,3 +1,4 @@
+![](./images/nss-isle-royale-logo.png)
 # Holiday Road from Nashville
 
 You and your teammates have been contracted by the National Parks Service to build an application that will allow people to build itineraries for their trips to the beautiful national parks that they maintain. The starting point of each trip will be Nashville, TN, but the destination will a national park selected by the user.
@@ -5,6 +6,8 @@ You and your teammates have been contracted by the National Parks Service to bui
 ## Getting Started
 
 This is going to be your first full, professional Sprint. A Sprint is part of the [Scrum Framework](https://en.wikipedia.org/wiki/Scrum_%28software_development%29) for agile development. You will be doing daily scrum stand-ups, where you provide a concise status update on your own work. You will be taking part in a sprint review where you demonstrate the work you have completed. You will be taking part in a retrospective, where the team reflects on the work done, the team dynamics, and discuss how to improve in the future.
+
+![](./images/dependencyGraph.png)
 
 ### Code Review
 
