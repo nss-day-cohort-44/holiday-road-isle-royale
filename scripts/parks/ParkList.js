@@ -3,12 +3,14 @@ import { parkCardHTML, parkCardDescriptionHTML } from "./Park.js"
 
 const parksElement = document.querySelector("#parkCard")
 const eventHub = document.querySelector("#container")
+const weatherHeader = document.querySelector(".weather__header")
 
 //Listens for selected park. Matches id from event object to park id. Then renders the preview park in the dom.
 eventHub.addEventListener("parkSelect", (changeEvent) => {
   // Makes park preview Blank
   if (changeEvent.detail.parkThatWasChosen === "0") {
     return (parksElement.innerHTML = "")
+
   }
   if (changeEvent.target.id !== 0) {
     const parks = useParks()
@@ -16,10 +18,13 @@ eventHub.addEventListener("parkSelect", (changeEvent) => {
       return taco.id === changeEvent.detail.parkThatWasChosen
     })
     const parksHTML = parkCardHTML(chosenPark)
-
     render(parksHTML)
+    return weatherHeader.innerHTML = `Five day forecast for ${chosenPark.city}, ${chosenPark.state}`
   }
+
 })
+
+
 // Details Btn
 // Listens for detail btn click. Renders the full park details in the dom.
 eventHub.addEventListener("parkDetailButtonClicked", (changeEvent) => {
@@ -57,4 +62,5 @@ const render = (parkObj) => {
 
 eventHub.addEventListener("itineraryStateChanged", () => {
   parksElement.innerHTML = ""
+  weatherHeader.innerHTML = ""
 })
