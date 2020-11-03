@@ -26,7 +26,6 @@ eventHub.addEventListener("click", (clickEvent) => {
 export const parkCardDescriptionHTML = (api) => {
   return `
     <div id="${api.id}" >
-        <h3 class="card__category">Park</h3>
         <img class="parkCard__image" src="${api.image.url}">
         <h4 class="parkCard__title title">${api.fullName}</h4>
         <br>
