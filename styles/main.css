@@ -22,11 +22,13 @@ header {
 }
 
 .left {
-    width: 65%;
+    width: 64%;
+    padding: 1em;
 }
 
 .right {
-    width: 35%
+    width: 34%;
+    padding: .5em;
 }
 
 .cardArea {
@@ -34,7 +36,24 @@ header {
     flex-direction: row;
 }
 
+.weather {
+    justify-content: space-evenly;
+    margin-top: .5em;
+}
+
+.weather__header {
+    text-align: center;
+}
+
 img {
     max-width: 100%;
+}
+
+.savedCards {
+    align-content: center;
+}
+
+.itineraryCard__image {
+    padding: 1em;
 }
 
