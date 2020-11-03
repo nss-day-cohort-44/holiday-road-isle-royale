@@ -3,50 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>Isle Royale</title>
   </head>
   <body>
-    <header><img class="logo" src="images/nss-isle-royale-logo.png"></header>
-    <div id="container"> 
-    <section class="left">
+    <header><img class="logo" src="images/nss-isle-royale-logo.png" /></header>
+    <div id="container">
+      <section class="left">
         <div class="select">
           <select id="parksFilter" class="filter"></select>
           <select id="bizarreFilter" class="filter"></select>
           <select id="eatsFilter" class="filter"></select>
           <button id="saveButton" class="button">Save Itinerary</button>
         </div>
-        <div class="weather__header">
-          Five day forecast for Nashville, TN
-        </div>
-        <div class="weather">
-        </div>
+        <div class="weather__header">Five day forecast for Nashville, TN</div>
+        <div class="weather"></div>
         <div class="previewArea">
           <div class="header__preview"><h2>Itinerary Preview</h2></div>
           <div class="cardArea">
-            <div id="parkCard" class="previewCard">
-
-            </div>
-            <div id="bizzarreCard" class="previewCard">
-
-            </div>
-            <div id="eateryCard" class="previewCard">
-
-            </div>
+            <div id="parkCard" class="previewCard"></div>
+            <div id="bizzarreCard" class="previewCard"></div>
+            <div id="eateryCard" class="previewCard"></div>
           </div>
-
         </div>
-    </section>
-    <section class="right">
-      <div class="savedArea">
-        <div class="savedCards">
-          <img>
-          <div class="savedDetails"></div>
+      </section>
+      <section class="right">
+        <div class="savedArea">
+          <div class="savedCards">
+            <img />
+            <div class="savedDetails"></div>
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+    <footer>Copyright ©2020</footer>
   </body>
   <script type="module" src="./scripts/main.js"></script>
 </html>
