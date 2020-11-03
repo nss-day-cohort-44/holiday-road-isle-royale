@@ -1,6 +1,6 @@
 ![](./images/nss-isle-royale-logo.png)
 
-# Welcome to Isle Royale
+# Welcome to Isle Royale "Holiday Road from Nashville" Project
 
 Our group was given the assignment to design an application to help plan a trip to one of the many National Parks of the United States of America using the National Parks API, as well as 2 APIs provided by Nasvhille Software School which list various Famous Eateries and Bizarre Attractions which the user may also browse and save to an itinerary to include 1 Park selection, 1 Eatery selection, and 1 Bizarre Attraction selection which can be saved and listed on the right side of the page. 
 
@@ -10,6 +10,7 @@ The Isle Royale team chose to tailor this app to a fictitious user persona named
 
 ![](./personas/persona-charles.png)
 
+## System Requirements 
 
 This page requires the use of a local JSON server to host the stored list of saved itineraries.
 
