@@ -50,6 +50,26 @@ const forecastHTML = (api) => {
     `
 }
 
+// The save button event clears the weather
 eventHub.addEventListener("itineraryStateChanged", () => {
     weatherElement.innerHTML = ""
   })
+
+// Displays Nashville weather when the page loads before a park is selected
+export const NashvilleWeather = () => {
+    const parks = useParks()
+    const nashvillePark = parks.find( selectedPark => {
+        return selectedPark.id === "89157226-8474-4BAE-B471-F1730993A468"
+    })
+    getWeather(nashvillePark)
+        .then(() => {
+            let fiveDayNashvilleForecast = ``
+            const forecast = useWeather()
+            
+            for (let i=0; i<=4; i++) {
+                fiveDayNashvilleForecast += forecastHTML(forecast[i])
+            }
+
+            render(fiveDayNashvilleForecast)
+        })
+}
