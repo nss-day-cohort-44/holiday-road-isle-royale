@@ -41,11 +41,13 @@ header {
 
 .weather {
     justify-content: space-evenly;
-    margin-top: .5em;
+    margin: .5em
 }
 
 .weather__header {
     text-align: center;
+    margin-top: .5em;
+    text-decoration: underline;
 }
 
 img {
