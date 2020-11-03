@@ -40,7 +40,7 @@ export const eateryCardHTML = (api) => {
          <h3 class="card__category">Eatery</h3>
          <br>
          <h4 class="eateryCard__title title">${api.businessName}</h4>
-         <div class="eateryCard__location location">${api.state}, ${api.city}</div>
+         <div class="eateryCard__location location">${api.city}, ${api.state}</div>
          <br>
          <div class="eateryCard__description description">${api.description}</div>
          <br>
